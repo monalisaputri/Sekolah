@@ -32,7 +32,11 @@ public class MenuUtamaView {
 	        	SiswaIPAView.displayMenuSiswaIPA();;
 	        	break;
 	        case 2:
+<<<<<<< HEAD
 	        	SiswaIPSView.displayMenuSiswaIPS();;
+=======
+	        	System.out.println("Anda memilih menu 2");
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 	        	break;
 	        case 3:
 	        	System.out.println("Terima kasih, Anda keluar dari aplikasi!");

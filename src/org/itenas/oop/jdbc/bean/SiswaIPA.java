@@ -33,8 +33,17 @@ public class SiswaIPA extends Siswa{
 	
 	public double hitungLamaTunggak() {
 		double lamaTunggak = 0;
+<<<<<<< HEAD
 
 		return lamaTunggak = bayarSPP;
+=======
+		if (lamaTunggak >= 3 ) {
+			lamaTunggak = 0.15 * bayarSPP;
+		} else {
+			lamaTunggak = bayarSPP;
+		}
+		return lamaTunggak;
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 	}
 	
 	
@@ -45,6 +54,7 @@ public class SiswaIPA extends Siswa{
 	@Override
 	public double hitungTotalSPP() {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 		return bayarSPP + hitungLamaTunggak() + denda();
 	}
 	
@@ -57,5 +67,10 @@ public class SiswaIPA extends Siswa{
 		}
 		return denda;
 	}
+=======
+		return bayarSPP + hitungLamaTunggak();
+	}
+	
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 	
 }

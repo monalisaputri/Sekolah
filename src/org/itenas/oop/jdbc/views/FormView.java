@@ -5,10 +5,13 @@ import java.util.Scanner;
 import org.itenas.oop.jdbc.bean.SiswaIPA;
 import org.itenas.oop.jdbc.dao.SiswaIPADAO;
 import org.itenas.oop.jdbc.daoimpl.SiswaIPADAOImpl;
+<<<<<<< HEAD
 import org.itenas.oop.jdbc.bean.SiswaIPS;
 import org.itenas.oop.jdbc.dao.SiswaIPSDAO;
 import org.itenas.oop.jdbc.daoimpl.SiswaIPSDAOImpl;
 
+=======
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 
 public class FormView {
 	public static void formInsertSiswaIPA() {
@@ -17,6 +20,7 @@ public class FormView {
 		char back;
 		SiswaIPA siswaIPA = new SiswaIPA();
 		SiswaIPADAO operation = new SiswaIPADAOImpl();
+<<<<<<< HEAD
 		System.out.println("              *****************************************                  ");
         System.out.println("              | Form Insert Data Siswa IPA       |                  ");
         System.out.println("              *****************************************                  ");
@@ -33,13 +37,34 @@ public class FormView {
         System.out.print("              | Beasiswa       :");
         siswaIPA.setBeasiswa(scanner2.nextInt());
         System.out.println("              *****************************************					 ");
+=======
+		System.out.println("      	*****************************************		");
+        System.out.println("			| Form Insert Data Siswa IPA       	|		");
+        System.out.println("              	*****************************************               ");
+        System.out.print("                	| ID							:");
+        siswaIPA.setId(scanner.nextInt());
+        System.out.print("               	| Nama		        				:");
+        siswaIPA.setNama(scanner2.nextLine());
+        System.out.print("             	 	| Email                   				:");
+        siswaIPA.setEmail(scanner2.nextLine());
+        System.out.print("              	| Lama Tunggak           				:");
+        siswaIPA.setLamaTunggak(scanner2.nextInt());
+        System.out.print("              	| Uang SPP              				:");
+        siswaIPA.setBayarSPP(scanner2.nextDouble());
+        System.out.print("              	| Beasiswa       					:");
+        siswaIPA.setBeasiswa(scanner2.nextInt());
+        System.out.println("              	*****************************************		");
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
         operation.saveSiswaIPA(siswaIPA);
         System.out.print("[B] Tekan Tombol B untuk kembali ke menu sebelumnya: ");
 		back = scanner2.next().charAt(0);
 		if (back == 'B' || back == 'b') {
 			SiswaIPAView.displayMenuSiswaIPA();
 		}
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 	}
 	
 	public static void formUpdateSiswaIPA() {
@@ -52,6 +77,7 @@ public class FormView {
 		System.out.print("Masukkan ID dari data yang akan diupdate: ");
 		id = scanner.nextInt();
 		System.out.println();
+<<<<<<< HEAD
 		System.out.println("              *****************************************                  ");
         System.out.println("              | Form Update Data Siswa IPA       |                  ");
         System.out.println("              *****************************************                  ");
@@ -69,6 +95,25 @@ public class FormView {
         System.out.print("              | Beasiswa      :");
         siswaIPA.setBeasiswa(scanner2.nextInt());
         System.out.println("              *****************************************					 ");
+=======
+		System.out.println("		*****************************************		");
+        System.out.println("              	| Form Update Data Siswa IPA       |     		");
+        System.out.println("              	*****************************************		");
+        System.out.print("              	| ID							:");
+        System.out.println(id);
+        siswaIPA.setId(id);
+        System.out.print("              	| Nama		        				:");
+        siswaIPA.setNama(scanner2.nextLine());
+        System.out.print("              	| Email                   				:");
+        siswaIPA.setEmail(scanner2.nextLine());
+        System.out.print("              	| Lama Tunggak            				:");
+        siswaIPA.setLamaTunggak(scanner2.nextInt());
+        System.out.print("              	| Gaji Tetap              				:");
+        siswaIPA.setBayarSPP(scanner2.nextDouble());
+        System.out.print("              	| Beasiswa      					:");
+        siswaIPA.setBeasiswa(scanner2.nextInt());
+        System.out.println("              	****************************************		");
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
         operation.updateSiswaIPA(siswaIPA);;
         System.out.print("[B] Tekan Tombol B untuk kembali ke menu sebelumnya: ");
 		back = scanner2.next().charAt(0);
@@ -109,6 +154,7 @@ public class FormView {
 		siswaIPA.setEmail(email);
 		operation.getSiswaIPAByEmail(email);	
 	}
+<<<<<<< HEAD
 	
 	
 	
@@ -210,4 +256,6 @@ public class FormView {
 		operation1.getSiswaIPSByEmail(email);
 	}
 
+=======
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 }

@@ -5,6 +5,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+import javax.swing.JOptionPane;
+
+import org.itenas.oop.jdbc.bean.SiswaIPA;
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 import org.itenas.oop.jdbc.bean.SiswaIPA;
 import org.itenas.oop.jdbc.dao.SiswaIPADAO;
 import org.itenas.oop.jdbc.utils.DatabaseUtil;
@@ -27,12 +33,19 @@ public class SiswaIPADAOImpl implements SiswaIPADAO{
 	@Override
 	public void getSiswaIPAByEmail(String email) {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 		DatabaseUtil db = new DatabaseUtil();
+=======
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 		SiswaIPA siswaIPA = new SiswaIPA();
 		try {
 			db.connect();
  
+<<<<<<< HEAD
             String query = "SELECT * FROM siswaIPA WHERE email = '"+email+"'";
+=======
+            String query = "SELECT * FROM SiswaIPA WHERE email = '"+email+"'";
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
             ResultSet rs = db.readData(query);
  
             // process query results
@@ -117,7 +130,11 @@ public class SiswaIPADAOImpl implements SiswaIPADAO{
 		String query;
 		try {
 			db.connect();
+<<<<<<< HEAD
 			query = "INSERT INTO siswaIPA (id, nama, email, lama_tunggak, bayar_spp,beasiswa, total_spp)"
+=======
+			query = "INSERT INTO karyawantetap (nip, nama, email, lama_tunggak, bayar_spp,beasiswa, total_spp)"
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 					+ " VALUES ("+siswaIPA.getId()+", '"
 					+ siswaIPA.getNama()+"', '"
 					+ siswaIPA.getEmail()+"', "
@@ -140,12 +157,21 @@ public class SiswaIPADAOImpl implements SiswaIPADAO{
 		String query;
 		try {
 			db.connect();
+<<<<<<< HEAD
 			query = "UPDATE siswaIPA SET nama='"+siswaIPA.getNama()+"',"
 					+ " email='"+siswaIPA.getEmail()+"',"
 					+ " lama_tunggak="+siswaIPA.getLamaTunggak()+","
 					+ " bayar_spp="+siswaIPA.getBayarSPP()+","
 					+ " beasiswa="+siswaIPA.getBeasiswa()+","
 					+ " total_spp="+siswaIPA.hitungTotalSPP()+" WHERE id='"+siswaIPA.getId()+"'";
+=======
+			query = "UPDATE karyawantetap SET nama='"+siswaIPA.getNama()+"',"
+					+ " email='"+siswaIPA.getEmail()+"',"
+					+ " lama_bekerja="+siswaIPA.getLamaTunggak()+","
+					+ " gaji_tetap="+siswaIPA.getBayarSPP()+","
+					+ " jumlah_dinas_luar="+siswaIPA.getBeasiswa()+","
+					+ " total_gaji="+siswaIPA.hitungTotalSPP()+" WHERE nip='"+siswaIPA.getId()+"'";
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 			
 			db.executeQuery(query);
 			System.out.println("Data berhasil diperbarui!");
@@ -161,7 +187,11 @@ public class SiswaIPADAOImpl implements SiswaIPADAO{
 		String query;
 		try {
 			db.connect();
+<<<<<<< HEAD
 			query = "DELETE FROM siswaIPA WHERE id='"+siswaIPA.getId()+"'";
+=======
+			query = "DELETE FROM siswaIPA WHERE nip='"+siswaIPA.getId()+"'";
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 			db.executeQuery(query);
 			TableView.displayTabelSiswaIPA(getAllSiswaIPA());
 		} catch (Exception e) {

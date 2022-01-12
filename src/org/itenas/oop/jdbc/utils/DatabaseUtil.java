@@ -10,9 +10,15 @@ import java.sql.Statement;
 
 public class DatabaseUtil {
 	//url database
+<<<<<<< HEAD
 		static final String DB_URL = "jdbc:mysql://localhost/siswa_management";
 		String user = "root";
 		String password = "basdat2020";
+=======
+		static final String DB_URL = "jdbc:mysql://localhost/employee_management";
+		String user = "root";
+		String password = "";
+>>>>>>> 60245bfb5a15dd07ff0afee7862d1e06296cab62
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet resultSet = null;
