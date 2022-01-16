@@ -30,7 +30,7 @@ public class SiswaIPSView {
         System.out.print("Pilih menu: ");
         menu = scanner.nextInt();
         
-        while (!(menu == 1 || menu == 2 || menu == 3 || menu == 4 || menu == 5 || menu == 6)) {
+        while (!(menu == 1 || menu == 2 || menu == 3 || menu == 4 || menu == 5 || menu == 6 || menu == 7)) {
         	System.out.println("Warning: Menu yang Anda masukkan salah!");
         	System.out.print("Silahkan pilih menu kembali: ");
         	menu = scanner.nextInt();
