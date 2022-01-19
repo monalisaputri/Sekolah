@@ -58,15 +58,14 @@ public class DatabaseUtil {
 	        return resultSet;
 	    }
 	 
-	    public void executeQuery(String query) {
-	        try {
-	            statement = connection.createStatement();
-	                                    
-	            statement.executeUpdate(query);
-	            
-	        } 
-	        catch (SQLException ex) {
-	            System.out.println("Terjadi error: " + ex.getMessage());
-	        }
+	   public void executeQuery (String query){
+		   try{
+			   statement = connection.createStatement();
+			   
+			   statement.executeUpdate(query);
+		   }
+		   catch (SQLExeption ex){
+			   System.out.println("Terjadi error: " + ex.getMessage());
+		   }
 	    }
 	}
